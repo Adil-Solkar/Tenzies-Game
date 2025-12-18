@@ -1,7 +1,9 @@
-function DiceRollButton({children}) {
+function DiceRollButton({children, handleClick}) {
   return (
     <div className="roll-dice-btn">
-        {children}
+        <button onClick={handleClick}>
+            {children}
+        </button>
     </div>
   )
 }

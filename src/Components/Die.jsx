@@ -1,5 +1,11 @@
-function Die({value}) {
-  return <button className="die">{value}</button>
+function Die({ value, isHeld, hold }) {
+  const bgColor = { backgroundColor: isHeld ? "#59E391" : "" };
+
+  return (
+    <button onClick={hold} style={bgColor} className="die">
+      {value}
+    </button>
+  );
 }
 
-export default Die
+export default Die;
